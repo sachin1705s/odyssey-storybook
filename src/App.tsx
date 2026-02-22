@@ -16,11 +16,6 @@ interface Slide {
 
 type GestureLabel = 'hello' | 'thumbs_up' | 'victory' | 'namaste';
 
-type GestureResult = {
-  label: GestureLabel | null;
-  reason?: string;
-};
-
 const slides = slidesData as Slide[];
 const STORAGE_KEY = 'odyssey_api_key';
 const GESTURE_DELAY_MS = 1200;

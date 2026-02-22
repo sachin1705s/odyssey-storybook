@@ -1,4 +1,4 @@
-import { Odyssey, type OdysseyEventHandlers, type StartStreamOptions } from '@odysseyml/odyssey';
+import { Odyssey, type OdysseyEventHandlers } from '@odysseyml/odyssey';
 
 const MAX_IMAGE_BYTES = 25 * 1024 * 1024;
 
@@ -15,7 +15,7 @@ export class OdysseyService {
     return this.client.connect(handlers);
   }
 
-  async startStream(options?: StartStreamOptions) {
+  async startStream(options?: Parameters<Odyssey['startStream']>[0]) {
     return this.client.startStream(options);
   }
 
